@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDX-Python</title>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div id="top-nav">
+      {% block topnav %}top nav{% endblock %}
+      </div>
+
+      <div id="left-nav">
+      {% block leftnav %}left nav{% endblock %}
+      </div>
+
+      <div id="body">
+      {% block body %}body{% endblock %}
+      </div>
+
+      <div id="footer">
+      {% block footer %}footer{% endblock %}
+      </div>
+
+    </div> <!-- container -->
+
+    {% block postcontainer %}{% endblock %}
+
+  </body>
+</html>
